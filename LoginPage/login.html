@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styleR.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <span>WorkIn</span>
+            </div>
+
+            <div class="cta--header">
+                <a href="../LoginPage/login.html" class="signIn-btn"> Sign In
+                    <!-- <p class="sign-in">Sign In</p> -->
+                </a>
+                <a href="../RegisterPage/register.html" class="signUp-btn"> Sign Up
+                    <!-- <p class="sign-up">Sign Up</p>  -->
+                </a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>Welcome To <span>WorkIn</span></h1>
+        </div>
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form id="signUpForm"">
+                    <h1 class="form-tittle">Sign <span>Up</span></h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registeration</span>
+                    <input type="text" id="signUpName" placeholder="Name">
+                    <input type="email" id="signUpEmail" placeholder="Email">
+                    <input type="password" id="signUpPassword" placeholder="Password">
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form id="signInForm">
+                    <h1 class="form-tittle">Sign <span>In</span></h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email password</span>
+                    <input type="email" id="signInEmail" placeholder="Email">
+                    <input type="password" id="signInPassword" placeholder="Password">
+                    <a href="#">Forget Your Password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all of site features</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Register with your personal details to use all of site features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>

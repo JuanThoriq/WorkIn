@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>JobConnect</title>
+    <link rel="stylesheet" href="JConnect.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <span>WorkIn</span>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="../Job Insight/JobInsight1.html">Job Insight</a>
+                </li>
+                <li class="menu-item">
+                    <a href="../Job Connect/JobConnect.html"><span class="highlight">Job Connect</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="../Job Community/JobCom1.html">Job Community</a>
+                </li>
+            </ul>
+
+            <div class="cta">
+                <i class="ri-account-circle-line"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- search bar -->
+    <div class="search-container">
+        <h1>Find Your Dream Job Here!</h1>
+        <div class="search-bar">
+            <div class="job-search">
+                <img src="./Assets/Icon/search.png" alt="">
+                <input type="text" placeholder="Job title, Company, or Keyword">
+            </div>
+            <img src="./Assets/Icon/Line.png" alt="">
+            <div class="loc-search">
+                <img src="./Assets/Icon/Loc.png" alt="">
+                <input type="text" placeholder="City, state, or zip">
+            </div>
+            <button>Find Jobs</button>
+        </div>
+    </div>
+
+    <!-- search bar end -->
+     <!-- pop up -->
+     <div class="popUp-container">
+        <div class="popUp-Content">
+            <i class="fa-regular fa-circle-check"></i>
+            <div class="popUp-desc">
+                <h2>Application Applied</h2>
+                <p>Your Job Application Letter Has Been Sent</p>
+            </div>
+            <button class="close">OK</button>
+        </div>
+
+    </div>
+    <!-- pop up end -->
+
+    <!-- main container -->
+    <div class="main-container">
+        
+
+        <!-- filter section -->
+        <div class="filter-section">
+            <div class="filter-header">
+                <h3>Filter</h3>
+                <button class="clear-btn">Clear</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+            <div class="filter-group">
+                <label for="date-post">Date Post</label>
+                <select id="date-post">
+                    <option value="any">Any Time</option>
+                    <option value="today">Today</option>
+                    <option value="today">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                </select>
+            </div>
+    
+            <div class="filter-group">
+                <label>Job Type</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="full-time" name="job-type" value="Full-Time">
+                    <label for="full-time">Full-Time</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Part-Time</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="freelance" name="job-type" value="Freelance">
+                    <label for="freelance">Freelance</label>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Company Ratings</label>
+                <div class="rating-options">
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-5" value="5">
+                        <label for="rating-5">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    </label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-4" value="4">
+                        <label for="rating-4">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-3" value="3">
+                        <label for="rating-3">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-2" value="2">
+                        <label for="rating-2">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-1" value="1">
+                        <label for="rating-1">
+                            <span class="star"><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Experience</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="entry-level" name="experience" value="Entry">
+                    <label for="entry-level">Entry Levels</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="intermediate-level" name="experience" value="Intermediate">
+                    <label for="intermediate-level">Intermediate Levels</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="expert-level" name="experience" value="Expert">
+                    <label for="expert-level">Expert Level</label>
+                </div>  
+            </div>
+    
+            <div class="filter-group">
+                <label>Salary Range</label>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="1-10">
+                <label for="">IDR 1M - 10M</label>
+                </div>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="11-20">
+                <label for="">IDR 11M - 20M</label>
+                </div>
+                <div class="radio-salary">
+                    <div class="custom-salary">
+                        <input type="radio" name="salary" value="custom">
+                        <label for="">Custom</label>
+                    </div>
+                    <div class="salary-range">
+                        <input type="number" id="salary-min" placeholder="IDR 25M"> to  
+                        <input type="number" id="salary-max" placeholder="IDR 28M"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="joblist-section">
+            <div class="sort-by">
+                <h3>Sort By</h3>
+                <select id="date-post">
+                    <option value="any">Recently</option>
+                    <option value="today">Relevant</option>
+                    <option value="today">Most View</option>
+                    <option value="month">High to Low Salary</option>
+                    <option value="year">Low to High Salary</option>
+                </select>
+            </div>
+          
+            <div class="job-list">
+
+               <!-- job 1 -->
+                    <div class="joblist-item" onclick="showPreview('job1')">
+                        <div class="joblist-header">
+                            <div class="job-header">
+                                <h3>Software Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                                <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                            <p>IDR 8M - 12M</p>
+                        </div>
+                        <div class="comp-detail">
+                            <div class="comp-logo">
+                                <img src="./Assets/Icon/tokopedia.png" alt="">
+                            </div>
+                            <div class="comp-name">
+                                <h4>Tokopedia</h4>
+                                <p>Jakarta</p>
+                            </div>
+                        </div>
+                        <div class="joblist-tags">
+                            <span class="tag">Full-Time</span>
+                            <span class="tag">Intermediate</span>
+                        </div>
+                    </div>
+
+                 <!-- Job 2 -->
+                <div class="joblist-item" onclick="showPreview('job2')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Product Manager <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 8M - 20M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/traveloka.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Traveloka</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 3 -->
+                <div class="joblist-item" onclick="showPreview('job3')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Frontend Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 10M - 13M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/ovo.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>OVO</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 4 -->
+                <div class="joblist-item" onclick="showPreview('job4')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Digital Marketer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 7M - 12M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/tiktok.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Tokopedia</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 5 -->
+                <div class="joblist-item" onclick="showPreview('job5')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Backend Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 8M - 16M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/logo tiket com.jpg" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Tiket.Com</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 6 -->
+                <div class="joblist-item" onclick="showPreview('job6')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Dev-ops Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 10M - 15M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/Bukalapak.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Bukalapak</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+               <!-- job 1 -->
+                    <div class="joblist-item" onclick="showPreview('job1')">
+                        <div class="joblist-header">
+                            <div class="job-header">
+                                <h3>Software Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                                <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                            <p>IDR 8M - 12M</p>
+                        </div>
+                        <div class="comp-detail">
+                            <div class="comp-logo">
+                                <img src="./Assets/Icon/tokopedia.png" alt="">
+                            </div>
+                            <div class="comp-name">
+                                <h4>Tokopedia</h4>
+                                <p>Jakarta</p>
+                            </div>
+                        </div>
+                        <div class="joblist-tags">
+                            <span class="tag">Full-Time</span>
+                            <span class="tag">Intermediate</span>
+                        </div>
+                    </div>
+
+                 <!-- Job 2 -->
+                <div class="joblist-item" onclick="showPreview('job2')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Product Manager <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 8M - 20M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/traveloka.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Traveloka</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 3 -->
+                <div class="joblist-item" onclick="showPreview('job3')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Frontend Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 10M - 13M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/ovo.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>OVO</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 4 -->
+                <div class="joblist-item" onclick="showPreview('job4')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Digital Marketer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 7M - 12M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/tiktok.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Tokopedia</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 5 -->
+                <div class="joblist-item" onclick="showPreview('job5')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Backend Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 8M - 16M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/logo tiket com.jpg" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Tiket.Com</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 6 -->
+                <div class="joblist-item" onclick="showPreview('job6')">
+                    <div class="joblist-header">
+                        <div class="job-header">
+                            <h3>Dev-ops Engineer <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="bookmark-btn"> <i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <p>IDR 10M - 15M</p>
+                    </div>
+                    <div class="comp-detail">
+                        <div class="comp-logo">
+                            <img src="./Assets/Icon/Bukalapak.png" alt="">
+                        </div>
+                        <div class="comp-name">
+                            <h4>Bukalapak</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="joblist-tags">
+                        <span class="tag">Full-Time</span>
+                        <span class="tag">Intermediate</span>
+                    </div>
+                </div>
+                
+
+                
+                <!-- list job end -->
+            </div>
+        </section>
+        <div class="job-preview-section" id="job-preview">
+            <!-- job1 -->
+            <div id="job1" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Software Engineer</h1>
+                        <p>From IDR 8M to IDR 12M</p>
+                    </div>
+                    <button class="apply-button" >Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/tokopedia.png" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Tokopedia</h2>
+                        <h5>Kota Jakarta Pusat, 10281</h5>
+                        <p>Online Marketplace</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Assist in designing, developing, and implementing integration solutions using Python, TypeScript, and SQL.</li>
+                        <li>Develop and maintain documentation for integration solutions, including technical specifications, API documentation, and user guides.</li>
+                        <li>Contribute to effective communication within the team and with business stakeholders.</li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Bachelor’s degree in Computer Science, Engineering, or related field.</li>
+                        <li>Proficiency in Python, TypeScript, and SQL.</li>
+                        <li>1-3 years of experience in software engineering with a focus on integrations or backend processing.</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Working From Hom e</li>
+                        <li>Competitive Salary + Allowances for (WIFI, Electricity, Laptop) + Bonuses (Based on KPI)</li>
+                        <li>13th Month Pay: Similar with THR</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Annual Leave 12days/year</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- job 2 -->
+            <div id="job2" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Product Manager</h1>
+                        <p>From IDR 8M to IDR 20M</p>
+                    </div>
+                    <button class="apply-button">Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/traveloka.png" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Traveloka</h2>
+                        <h5>Kota Jakarta Pusat, 10250</h5>
+                        <p>Online travel company providing booking services.</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Maintain Private Block Networks (PBN).</li>
+                        <li>Redirection.</li>
+                        <li>Keyword research.</li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Candidate must possess at least a Vocational Diploma / Short Course Certificate, Bachelor's/ College Degree, any field.</li>
+                        <li>Experience as SEO/SEM in iGaming or at least Digital Agency.</li>
+                        <li>At least 4 year(s) of working experience in the related field is required for this position.</li>
+                        <li>Understanding and update related the trend of SEO (Search Engine Optimization) SEM (Search Engine Marketing), SMO (Social Media Optimization).</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Working From Hom e</li>
+                        <li>Competitive Salary + Allowances for (WIFI, Electricity, Laptop) + Bonuses (Based on KPI)</li>
+                        <li>13th Month Pay: Similar with THR</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Annual Leave 12days/year</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- job 3 -->
+            <div id="job3" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Frontend Engineer</h1>
+                        <p>From IDR 10M to IDR 13M</p>
+                    </div>
+                    <button class="apply-button">Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/ovo.png" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>OVO</h2>
+                        <h5>Kota Jakarta Pusat, 10250</h5>
+                        <p>digital wallet offering comprehensive financial services.</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Maintain Private Block Networks (PBN).</li>
+                        <li>Redirection.</li>
+                        <li>Keyword research.</li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Candidate must possess at least a Vocational Diploma / Short Course Certificate, Bachelor's/ College Degree, any field.</li>
+                        <li>Experience as SEO/SEM in iGaming or at least Digital Agency.</li>
+                        <li>At least 4 year(s) of working experience in the related field is required for this position.</li>
+                        <li>Understanding and update related the trend of SEO (Search Engine Optimization) SEM (Search Engine Marketing), SMO (Social Media Optimization).</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Working From Hom e</li>
+                        <li>Competitive Salary + Allowances for (WIFI, Electricity, Laptop) + Bonuses (Based on KPI)</li>
+                        <li>13th Month Pay: Similar with THR</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Annual Leave 12days/year</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- job 4 -->
+            <div id="job4" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Digital Marketer</h1>
+                        <p>From IDR 7M to IDR 12M</p>
+                    </div>
+                    <button class="apply-button">Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/tiktok.png" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Tiktok</h2>
+                        <h5>Kota Jakarta Pusat, 10250</h5>
+                        <p>social platform that sparks creativity and connections worldwide.</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Develop and execute digital marketing campaigns across various platforms including social media, search engines, and email.</li>
+                        <li>Analyze campaign performance metrics and optimize strategies based on data-driven insights.</li>
+                        <li>Maintain and report on digital marketing budgets and expenditures./li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Bachelor’s degree in Marketing, Communications, or related field.</li>
+                        <li>Creative thinking and problem-solving skills to innovate and adapt in a dynamic digital landscape.</li>
+                        <li>Familiarity with SEO, SEM, email marketing, and content management systems (CMS) is preferred.</li>
+                        <li>Ability to manage multiple projects simultaneously and meet deadlines in a fast-paced environment.</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Remote work flexibility.</li>
+                        <li>Performance-based bonuses and incentives.</li>
+                        <li>13th-month pay and annual performance bonuses.</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Annual Leave 12days/year</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- job 5 -->
+            <div id="job5" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Backend Engineer</h1>
+                        <p>From IDR 8M to IDR 16M</p>
+                    </div>
+                    <button class="apply-button">Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/logo tiket com.jpg" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Tiket.Com</h2>
+                        <h5>Kota Jakarta Pusat, 10250</h5>
+                        <p>Online travel company providing booking services.</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Design, develop, and deploy scalable and efficient backend solutions using Python, TypeScript, and SQL.</li>
+                        <li>Write clean, maintainable code with proper documentation and version control.</li>
+                        <li>Participate in code reviews and provide constructive feedback to peers.</li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Bachelor’s degree in Computer Science, Engineering, or a related field.</li>
+                        <li>Familiarity with cloud platforms (e.g., AWS, Azure, GCP) and containerization technologies (e.g., Docker, Kubernetes).</li>
+                        <li>Knowledge of RESTful APIs, GraphQL, and microservices architecture.</li>
+                        <li>Effective communication skills to interact with team members and stakeholders.</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Remote work option.</li>
+                        <li>Performance-based bonuses and rewards.</li>
+                        <li>13th Month Pay: Similar with THR</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Competitive salary with allowances for remote work essentials (e.g., internet, laptop).</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- job 6 -->
+            <div id="job6" class="job-details">
+                <div class="preview-header">
+                    <div class="header-tittle">
+                        <h1>Dev-ops Engineer</h1>
+                        <p>From IDR 8M to IDR 20M</p>
+                    </div>
+                    <button class="apply-button">Apply</button>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full-Time</span>
+                    <span class="tag">Intermediate</span>
+                </div>
+                <div class="company-info">
+                    <img src="./Assets/Icon/Bukalapak.png" alt="Traveloka Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Bukalapak</h2>
+                        <h5>Kota Jakarta Pusat, 10250</h5>
+                        <p>Online travel company providing booking services.</p>
+                    </div>
+                    <a  href="" class="see-profile">see profile</a>
+                </div>
+                <div class="job-description">
+                    <h3>Job's Description</h3>
+                    <ul>
+                        <li>Design, implement, and maintain continuous integration and delivery (CI/CD) pipelines to automate software deployment and infrastructure management.</li>
+                        <li>Collaborate with development and operations teams to streamline and optimize the software development lifecycle (SDLC).</li>
+                        <li>Monitor and maintain cloud infrastructure (AWS, Azure, GCP) to ensure high availability and performance of applications and services.</li>
+                        <li>Perform regular security assessments and implement best practices for infrastructure security (e.g., network security, access control).</li>
+                    </ul>
+                </div>
+                <div class="requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Proven experience (1-3 years) as a DevOps Engineer or similar role.</li>
+                        <li>roficiency in scripting and automation using languages such as Python, Shell scripting, or PowerShell.</li>
+                        <li>Familiarity with cloud platforms (AWS, Azure, GCP) and serverless computing.</li>
+                        <li>xperience with containerization and orchestration platforms (e.g., Docker, Kubernetes).</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Working From Hom e</li>
+                        <li>Competitive Salary + Allowances for (WIFI, Electricity, Laptop) + Bonuses (Based on KPI)</li>
+                        <li>13th Month Pay: Similar with THR</li>
+                        <li>Working days: 5 days + 2 days off</li>
+                        <li>Working Hours: 9 Hrs + 1 Hr Lunch Break</li>
+                        <li>Annual Leave 12days/year</li>
+                        <li>Sick Leave 7days/year</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-header">
+            <div class="logo">
+                <span>WorkIn</span>
+            </div>
+
+            <div class="footer-items 1">
+                <h2 class="footer-title-item">WorkIn</h2>
+                <ul class="footer-menu-items">
+                    <li class="footer-item">
+                        <a href="">About</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-items 2">
+                <h2 class="footer-title-item">Information</h2>
+                <ul class="footer-menu-items">
+                    <li class="footer-item">
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">Privacy & Terms</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-items social-media">
+                <h2 class="footer-title-item">Social Media</h2>
+                <ul class="footer-menu-items">
+                    <li class="footer-item">
+                        <a href=""><i class="ri-facebook-circle-fill"></i></a>
+                    </li>
+                    <li class="footer-item">
+                       <a href=""><i class="ri-twitter-x-line"></i></a> 
+                    </li>
+                    <li class="footer-item">
+                       <a href=""><i class="ri-instagram-line"></i></a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-footer">
+            <p>Copyright WorkIn 2024</p>
+            <div class="footer-footer-right">
+                <a href="">Cookie Settings</a>
+                <a href="">Privacy Policys</a>
+                <a href="">Terms of Service</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="JConnect.js"></script>
+</body>
+</html>
+         
