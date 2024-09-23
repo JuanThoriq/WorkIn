@@ -1,35 +1,27 @@
-# WorkIn
+# WorkIn - Job Platform
 
-# 🤖 Introduction
+## 🧑‍💻 Introduction
+WorkIn is a job portal designed to help job seekers and employers connect efficiently. The platform provides comprehensive information on job sectors, company details, job vacancies, and community support for both job seekers and recruiters. In line with **SDG Goal No. 8: Decent Work and Economic Growth**, WorkIn contributes to reducing unemployment and promoting better job matching between employers and job seekers, fostering sustainable and inclusive economic growth.
 
-WorkIn is a website platform to help people of productive age and job vacancy providers in finding and providing job opportunities. This platform provides information regarding job industries (Fields and subfields) and information about companies, job vacancies, and communities. Therefore, WorkIn helps people of productive age to find opportunities according to their skills and helps job vacancy providers to find the right candidates for their company's needs.
-By providing easy access and relevant information and in line with the objectives of **Sustainable Development Goal (SDG) No. 8: Decent Work and Economic Growth**. WorkIn contributes to reducing the unemployment rate and increasing the suitability of jobs to educational background. This is expected to encourage inclusive and sustainable economic growth, as well as ensure productive and decent work opportunities for all.
-
-# ⚙️ Tech Stack
+## ⚙️ Tech Stack
 - HTML
 - CSS
-- Java Script
+- JavaScript
 
-# ⚡ Features
-1. JobInsight
+## 🌟 Features
+1. **JobInsight**: Provides industry-specific job insights, covering fields, subfields, job demands, and relevant information for career growth.
+2. **JobConnect**: Facilitates job vacancy searches and connections between job seekers and companies.
+3. **JobCommunity**: Offers a community space for professionals to share experiences, network, and find support.
 
-2. JobConnect
+## 🚧 Project Status & Notes
+- **University project** to build foundational HTML, CSS, and JavaScript skills.
+- **No Backend** implemented.
+- **Not responsive**, optimized for **1440px** screen width.
+- Developed Figma designs for the Landing Page and JobInsight feature.
+- Code development focused on the **JobInsight** feature.
+- Gained experience using Git and GitHub for collaboration.
 
-3. JobCommunity
-
-
-# 🤗 Note
-- This my second project univ project for learning basic fundamental of HTML, CSS, and Js
-- **No BackEnd**
-- **Not Responsive** so the best screen width is **1440px**
-- I am working on figma for Landing Page and JobInsight feature
-- I am working on code for JobInsight feature
-- Learn how to use Git with GitHhub
-
-
-# 🔗 Links
-- Figma prototype : https://www.figma.com/proto/YKcG39zgLFB8QMBzKuxGv1/Prototype-WorkIn?node-id=0-1&t=sCuvJRNUN5H3HdDJ-1
-- Figjam : https://www.figma.com/board/XqxSwPNrhQwhS0x4jFS9H0/WorkIn?t=aiDae9giBlof0d3p-1
-- Website : https://itismefinn.github.io/WorkIn.github.io/
-
-
+## 🔗 Links
+- [Figma Prototype](https://www.figma.com/proto/YKcG39zgLFB8QMBzKuxGv1/Prototype-WorkIn?node-id=0-1&t=sCuvJRNUN5H3HdDJ-1)
+- [FigJam Board](https://www.figma.com/board/XqxSwPNrhQwhS0x4jFS9H0/WorkIn?t=aiDae9giBlof0d3p-1)
+- [Live Demo](https://itismefinn.github.io/WorkIn.github.io/)
